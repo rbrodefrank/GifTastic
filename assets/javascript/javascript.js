@@ -35,16 +35,21 @@ $(document).on("click", ".movie", function(){
         var data = response.data;
         for(var i = 0; i < data.length; i++) {
             var div = $("<div>");
-            div.addClass("gif");
             div.attr("style", `float: left`);
+            div.addClass("gif-holder");
+
             var image = $("<img>");
-            image.attr("src", data[i].images.fixed_height_small.url);
+            image.addClass("gif");
+            image.attr("data-still", data[i].images.fixed_height_small_still.url);
+            image.attr("data-animated", data[i].images.fixed_height_small.url);
+            image.attr("data-state", "still");
+            image.attr("src", data[i].images.fixed_height_small_still.url);
             image.attr("alt", "gif");
             div.append(image);
 
             div.prepend(`<div>Rating: ${data[i].rating}</div>`);
             
-            console.log(data[i].images.fixed_height_small.url)
+            // console.log(data[i].images.fixed_height_small.url)
 
 
             $("#gifs").prepend(div);
@@ -53,3 +58,18 @@ $(document).on("click", ".movie", function(){
 });
 
 createButtons();
+
+$("#gifs").on("click", ".gif", function() {
+    if($(this).attr("data-state") === "still") {
+        console.log($(this).attr("data-animated"));
+        $(this).attr("src", $(this).attr("data-animated"));
+        $(this).attr("data-state", "animated");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
+
+$("#clear-gifs").on("click", function(){
+    $("#gifs").empty();
+});
