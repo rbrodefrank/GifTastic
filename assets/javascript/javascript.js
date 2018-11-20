@@ -36,7 +36,7 @@ $(document).on("click", ".movie", function(){
         for(var i = 0; i < data.length; i++) {
             var div = $("<div>");
             div.addClass("gif");
-            div.attr("style", "display: inline");
+            div.attr("style", `float: left`);
             var image = $("<img>");
             image.attr("src", data[i].images.fixed_height_small.url);
             image.attr("alt", "gif");
