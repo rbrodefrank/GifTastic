@@ -1,0 +1,53 @@
+body {
+    background-color: #37B79D;
+}
+
+.container {    
+    min-height: 100vh;
+    background-color: #3B84AA;
+}
+
+button {
+    box-sizing: border-box;
+    margin: 5px;
+    font-weight: bold;
+    background-color: #3A6FC1;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #3748B7;
+}
+
+label {
+    font-weight: bold;
+}
+
+#tags {
+    border-bottom: 2px solid #2A5D77;
+    margin-bottom: 6px; 
+}
+
+.gif-holder {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    border-bottom: 1px solid #3AB6C1;
+    margin-bottom: 4px;
+}
+
+#movie-input {
+    margin-bottom: .5rem;
+}
+
+#col-right {
+    border-left: 3px solid #3748B7;
+}
+
+#add-movie {
+    background-color: #77741E;
+}
+
+#clear-gifs {
+    background-color: #B7525B;
+}

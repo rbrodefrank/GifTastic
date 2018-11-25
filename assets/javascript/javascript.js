@@ -15,8 +15,10 @@ function createButtons() {
 
 $("#add-movie").on("click", function(event) {
     var movie = $("#movie-input").val().trim();
-    movies.push(movie);
-    createButtons();
+    if(movie != "") {
+        movies.push(movie);
+        createButtons();
+    }
 });
 
 $(document).on("click", ".movie", function(){
@@ -46,8 +48,8 @@ $(document).on("click", ".movie", function(){
             image.attr("src", data[i].images.fixed_height_small_still.url);
             image.attr("alt", "gif");
             div.append(image);
-
-            div.prepend(`<div>Rating: ${data[i].rating}</div>`);
+            
+            div.prepend(`<div class="rating">Rating: ${data[i].rating}</div>`);
             
             // console.log(data[i].images.fixed_height_small.url)
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>GifTastic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -11,17 +11,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
+    <div class="container">
         <div id="tags"></div>
 
         <div class="row">
             <div id="gifs" class="col-9"></div>
-            <div class="col-3">
+            <div id="col-right" class="col-3">
                 <label for="movie-input">Add A Disney Movie:</label>
                 <input class="form-control" id="movie-input" type="text">
-                <button class="btn btn-default" id="add-movie" type="submit">Submit</button>
+                <button class="button" id="add-movie" type="submit">Submit</button>
                 <br>
-                <button class="btn btn-warning" id="clear-gifs">Clear</button>
+                <button class="button" id="clear-gifs">Clear</button>
             </div>
         </div>
     </div>
